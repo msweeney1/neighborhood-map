@@ -1,7 +1,7 @@
 # Neighborhood-map
 <img src="img/logo.png" alt="">
 
-It says "neighborhood map", but this map actually shows the area surrounding my old university instead. I spent a lot of time around these places, so I decided it was more appropiate. My city, Ciudad Obregon, is not big but I quite like it here. Hope you do too.
+It says "neighborhood map", but this map actually shows the area where I grew up instead. I spent a lot of time around these places, so I decided it was more appropiate. The village of Chittenango NY is not big but I liked living there.
 
 The [Live project](http://msweeney1.github.io/neighborhood-map/) is hosted in github pages.
 
@@ -34,6 +34,12 @@ npm install
 The heart of the application is [app.js](js/app.js), so it's probable you'll want to modify it. Check the documentation on [more info on app.js](js/AppJsInfo.md) if you need it explained further.
 
 I do not recommend modifying the contents of [dist](dist), because these will be modified each time you run grunt.
+
+Updates
+
+I corrected the issue in app.js where the wikipedia ID and foursqaure IP for some locations were pointing to areas in Ciudad Obregon so that they now point to the locations in Chittenango NY.
+
+I corrected the css file names so that the links in index.html now point to the correct css files.
 
 References
 -------------------------------------
