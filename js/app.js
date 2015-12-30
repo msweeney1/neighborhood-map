@@ -112,7 +112,7 @@ function initialize() {
     ,new Location('Old Erie Canal State Park ', 'Park', 43.060393, -75.870871, type.outdoors, {'foursquareId': '4e16f0662271881f205092af'})
     ,new Location('Community Recognition Park', 'Park', 43.057642, -75.864034, type.recreation, {'foursquareId': '4bfedc21369476b009f88c1f'})
     ,new Location('Jean Elaine\'s School of Dance', 'Dance School', 27.493909, -109.966797, type.entertainment, {'foursquareId': '4bdf688be75c0f47e720cb03'})
-    ,new Location('Donna & Sam\'s Coffee ', 'Coffee Shop', 43.047972, -75.865878, type.food, {'wikipediaId': '4771088', 'foursquareId': '4ca711d4b0b8236a3c5ca5e6'})
+    ,new Location('Donna & Sam\'s Coffee ', 'Coffee Shop', 43.047972, -75.865878, type.food, {'foursquareId': '4ca711d4b0b8236a3c5ca5e6'})
     ];
 
     // And we bind to our view model
@@ -402,7 +402,7 @@ var ViewModel = function() {
         if (location.foursquareInfo()) {
             setFoursquareTips(location.foursquareInfo());
         } else if (location.foursquareId()) {
-            var url = 'https://api.foursquare.com/v2/venues/explore?near=Ciudad Obregon&venuePhotos=1&query=' + location.title() + '&intent=match&client_id=EPFA1HIBXSJXCJM4V3CSQZ3WA2D4ZZ0E3TJ5BP0QXGYODOBZ&client_secret=05JENVJTNP2SHJCYBZM1KI3XTH4ZXI3OWBQWA1PC3NCVUADD&v=20150504';
+            var url = 'https://api.foursquare.com/v2/venues/explore?near=Chittenango&venuePhotos=1&query=' + location.title() + '&intent=match&client_id=EDR2R5ODBN2Y13BH3WIFQZNJG0BGMRFPPE3BUSU1VEHHOG0I&client_secret=VZ1LUD0NA0QFQ0SCKXPFRHQF2FU43TVZPWRN1YMY5OOBESVO&v=20150504';
             getJSON(url, setFoursquareTips, onErrorCallback);
         } else {
             onErrorCallback();
@@ -448,7 +448,7 @@ var ViewModel = function() {
         if (location.foursquareInfo()) {
             setFoursquarePhoto(location.foursquareInfo());
         } else if (location.foursquareId()) {
-            var url = 'https://api.foursquare.com/v2/venues/explore?near=Ciudad Obregon&venuePhotos=1&query=' + location.title() + '&intent=match&client_id=EPFA1HIBXSJXCJM4V3CSQZ3WA2D4ZZ0E3TJ5BP0QXGYODOBZ&client_secret=05JENVJTNP2SHJCYBZM1KI3XTH4ZXI3OWBQWA1PC3NCVUADD&v=20150504';
+            var url = 'https://api.foursquare.com/v2/venues/explore?near=Chittenango&venuePhotos=1&query=' + location.title() + '&intent=match&client_id=EDR2R5ODBN2Y13BH3WIFQZNJG0BGMRFPPE3BUSU1VEHHOG0I&client_secret=VZ1LUD0NA0QFQ0SCKXPFRHQF2FU43TVZPWRN1YMY5OOBESVO&v=20150504';
             getJSON(url, setFoursquarePhoto, onErrorCallback);
         } else {
             onErrorCallback();
