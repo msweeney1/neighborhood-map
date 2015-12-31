@@ -41,6 +41,8 @@ I corrected the issue in app.js where the wikipedia ID and foursqaure IP for som
 
 I corrected the css file names so that the links in index.html now point to the correct css files.
 
+I corrected the error handling in the app.js file.
+
 References
 -------------------------------------
 The code in this repository (or that was in this repository at some point) as well as the ideas put in practice here were possible thanks to the authors of the following:
