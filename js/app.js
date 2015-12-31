@@ -371,14 +371,16 @@ var ViewModel = function() {
      * Loads the location's information if successful
      * @param  Location location
      */
+     var wikiRequestTimeout = setTimeout(function(){
+       $wikiElem.text("failed to get wikipedia resources");
+     }, 8000);
+
     self.loadInfo = function(location) {
         if (location.info()) {
             setWikipediaDescription(location.info());
-        } else if (location.wikipediaId()) {
+        } else (location.wikipediaId()) {
             var url = 'http://en.wikipedia.org/w/api.php?action=query&prop=extracts&exchars=250&format=json&pageids=' + location.wikipediaId();
             getJSONP(url, setWikipediaDescription, onErrorCallback);
-        } else {
-            onErrorCallback();
         }
 
         function setWikipediaDescription(data) {
@@ -387,11 +389,9 @@ var ViewModel = function() {
             var innerHtml = data.query.pages[location.wikipediaId()].extract,
             sourceHtml = '<a target="_blank" class="source icon-wikipedia" href="https://en.wikipedia.org/wiki?curid=' + location.wikipediaId() + '"> Courtesy of Wikipedia</a>';
             self.descriptionDOM(innerHtml + sourceHtml);
-        }
+        };
 
-        function onErrorCallback() {
-            self.showInfo(false);
-        }
+        clearTimeout(wikiRequestTimeout);
     };
 
     /**
